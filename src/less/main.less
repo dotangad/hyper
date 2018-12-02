@@ -210,7 +210,7 @@ button:focus {
   font-size: 1.2rem;
 }
 .center .goal.none {
-  color: #eee;
+  color: #ddd;
   text-transform: uppercase;
 }
 
@@ -229,4 +229,10 @@ button:focus {
   text-transform: uppercase;
   padding-right: 18px;
   // font-weight: bold;
+}
+
+button.disabled {
+  background: @disabled !important;
+  color: white;
+  cursor: not-allowed !important;
 }
