@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
   resetForm.addEventListener('click', e => {
     // Clear goal
+    goalInput.value = ''
     goal.classList = 'goal none'
     goal.innerText = 'No goal set'
 
