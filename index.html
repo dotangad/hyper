@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HYPER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="img/hyper.png" />
+</head>
+
+<body>
+  <div class="content" style="height: 100%;">
+    <div class="header">
+      <span>Hyper <i style="font-size: 1.65rem;" class="fas fa-bolt"></i></span>
+      <span>Bite-sized focus</span>
+    </div>
+
+    <div class="center">
+      <div class="goal none">No goal set</div>
+      <div class="timer">10:05.565</div>
+      <div class="controls">
+	<button style="margin-right: 20px;">Restart</button>
+	<button>Stop</button>
+      </div>
+    </div>
+
+    <!-- This div is only for spacing, so that the center div is perfectly aligned  -->
+    <div style="height: calc(30% - 30px); width: 100%;"></div>
+  </div>
+  <div class="overlay"></div>
+  <div class="settings">
+    <div class="toggle">
+      <div>Settings</div>
+      <div><i style="font-size: 1.5rem;" class="fas fa-arrow-up"></i></div>
+    </div>
+    <div class="settings-content">
+      <div class="container" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+	<div class="goal">
+	  <input type="text" placeholder="Goal" id="goal" />
+	</div>
+	<div class="settime">
+	  <div>Time(minutes) per session</div>
+	  <input type="number" placeholder="15" id="minutes" />
+	</div>
+	<div class="save">
+	  <button style="margin-right: 20px;">Save</button>
+	  <button>Reset</button>
+	</div>
+      </div>
+      
+      <div class="credits" stlye="width: 100%;">
+	<div>Made with <span style="color: red;">&lt;3</span> by <a target="_blank" href="//github.com/dotangad">dotangad</a></div>
+	<div><a href="">Add to homescreen</a></div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="app.bundle.js"></script></body>
+
+</html>
