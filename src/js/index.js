@@ -54,8 +54,10 @@ document.addEventListener('DOMContentLoaded', e => {
   })
 
   timerReset.addEventListener('click', e => {
-    e.preventDefault()
-    timer.reset(minutes || 15)
+    if (!timer.isOn) {
+      e.preventDefault()
+      timer.reset(minutes || 15)
+    }
   })
 
   saveForm.addEventListener('click', e => {
