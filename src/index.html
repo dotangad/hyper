@@ -11,15 +11,23 @@
 </head>
 
 <body>
-  <div class="content">
+  <div class="content" style="height: 100%;">
     <div class="header">
       <span>Hyper <i style="font-size: 1.65rem;" class="fas fa-bolt"></i></span>
       <span>Bite-sized focus</span>
     </div>
 
-    <div class="hello">hekrj</div>
+    <div class="center">
+      <div class="goal none">No goal set</div>
+      <div class="timer">10:05.565</div>
+      <div class="controls">
+	<button style="margin-right: 20px;">Restart</button>
+	<button>Stop</button>
+      </div>
+    </div>
 
-    <div class="footer" style="height: calc(20% - 30px); width: 100%;"></div>
+    <!-- This div is only for spacing, so that the center div is perfectly aligned  -->
+    <div style="height: calc(30% - 30px); width: 100%;"></div>
   </div>
   <div class="overlay"></div>
   <div class="settings">
@@ -37,7 +45,8 @@
 	  <input type="number" placeholder="15" id="minutes" />
 	</div>
 	<div class="save">
-	  <button>Save</button>
+	  <button style="margin-right: 20px;">Save</button>
+	  <button>Reset</button>
 	</div>
       </div>
       
@@ -47,8 +56,6 @@
       </div>
     </div>
   </div>
-
-  <script src="js/index.js"></script>
 </body>
 
 </html>

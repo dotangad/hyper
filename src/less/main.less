@@ -1,3 +1,8 @@
+@orange: #DE8633;
+@overlay-bg: #00000030;
+@disabled: #555;
+@link-color: #2977f5;
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -20,14 +25,14 @@ body, html {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat';
-  transition: all 0.3s ease;
+  // transition: all 0.3s ease;
   font-size: 1rem;
 }
 
 .content {
   height: 100%;
   width: 100%;
-  background: #DE8633;
+  background: @orange;
   color: white;
   position: relative;
   z-index: 100000;
@@ -38,11 +43,12 @@ body, html {
 .overlay {
   height: 100%;
   width: 100%;
-  background: #00000040;
+  background: @overlay-bg;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99999;
+  transition: all 0.5s ease;
 }
 
 .overlay.show {
@@ -56,7 +62,7 @@ body, html {
   bottom: 0;
   left: 0;
   height: 470px;
-  width: 100%;
+  width: 100vw;
   background: white;
   transform: translateY(400px);
 }
@@ -124,19 +130,26 @@ body, html {
 .goal input {
   width: 290px;
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid @orange;
   padding: 10px 20px;
 }
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 .goal button {
   text-transform: uppercase;
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid @orange;
   background: none;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.settime.disabled input,
+.goal.disabled input {
+  border-color: @disabled;
+  color: @disabled;
 }
 
 .settime {
@@ -150,25 +163,28 @@ input:focus {
   padding-left: 0;
 }
 .settime input {
-  max-width: 17%;
+  max-width: 70px;
   border: none;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid @orange;
   background: none;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .save {
   margin-top: 20px;
 }
 .save.disabled button {
-  background: #aaa;
+  background: @disabled;
+  cursor: default;
 }
 .save button {
+  cursor: pointer;
   background: none;
   border: none;
   text-transform: uppercase;
+  background: @orange;
+  color: white;
   padding: 10px 20px;
-  border: 1px solid #aaa;
   border-radius: 5px;
 }
 
@@ -180,5 +196,37 @@ input:focus {
 
 .credits a {
   text-decoration: none;
-  color: #2977f5;
+  color: @link-color;
+}
+
+.center {
+  text-align: center;
+}
+.center .goal {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.center .goal.none {
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.center .timer {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.center .controls button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding-right: 18px;
+  // font-weight: bold;
 }
