@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  background: #DE8633;
+  color: white;
+  position: relative;
+  z-index: 100000;
+  padding: 40px;
+  padding-bottom: 70px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: #00000040;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.overlay.show {
+  z-index: 100001;
+}
+
+.settings {
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  z-index: 100002;
+  bottom: 0;
+  left: 0;
+  height: 470px;
+  width: 100%;
+  background: white;
+  transform: translateY(400px);
+}
+.settings.show {
+  transform: translateY(0);
+}
+
+.settings .toggle {
+  height: 70px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content .header {
+  min-height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content .header span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content .header span:first-child {
+  letter-spacing: 4px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.settings,
+.settings * {
+  transition: all 0.5s ease;
+}
+
+.settings.show i {
+  transform: rotate(180deg);
+}
+
+.settings .settings-content {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal {
+  display: flex;
+}
+.goal input {
+  width: 290px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 20px;
+}
+input:focus {
+  outline: none;
+}
+.goal button {
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.settime {
+  width: 350px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.settime div {
+  padding: 10px 20px;
+  padding-left: 0;
+}
+.settime input {
+  max-width: 17%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: none;
+  padding: 10px 20px;
+}
+
+.save {
+  margin-top: 20px;
+}
+.save.disabled button {
+  background: #aaa;
+}
+.save button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.credits {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.credits a {
+  text-decoration: none;
+  color: #2977f5;
+}
